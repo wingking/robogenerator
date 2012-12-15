@@ -53,7 +53,7 @@ Disadvantage:
 Here I would like to introduce this tool by several actual examples
 
 ====================================
-No1£º using combinatorial techniques
+No1ï¿½ï¿½ using combinatorial techniques
 ====================================
 
 1.Here is an example machine (using combinatorial techniques)
@@ -131,7 +131,7 @@ Which means: Following combination is invalid
 10.How to generate test case:
 	Assume the model filename is create_and_delete_volume_test.py , and randomly generate 10 test case, output file is show.html
 
-	robogenerator  - g random ¨Ct 10 ¨Co show.html ¨Cip *.*.*.*  create_and_delete_volume_test.py
+	robogenerator  - g random ï¿½Ct 10 ï¿½Co show.html ï¿½Cip *.*.*.*  create_and_delete_volume_test.py
 		
 		
 ========================================================
@@ -201,19 +201,22 @@ No2: using model-based testing with finite state machine
 		initial = 'idle_state'
 	
 	2. different strategy to test
-	    ShortestPath  ----- Generate case according to China Postman graph algorithm, which could balance test feedback cycle and test coverage 
-	    StateCoverage ------- When need to select next step, it will select the minimum state as their next State
-	    ActionNameCoverage ------- Select least covered Action Name To test
-	    DynamicRandom ------------- Randomly select next State but try to avoid already tested
+	    ShortestPath  ----- Generate case according to China Postman graph algorithm, which could balance test feedback cycle and test coverage. 
+
+	    StateCoverage ------- When need to select next step, it will select the minimum state as their next State.
+
+	    ActionNameCoverage ------- Select least covered Action Name To test.
+
+	    DynamicRandom ------------- Randomly select next State but try to avoid already tested.
  
 	3. Could indicate how many steps inside one test case
  
 	4. Examples
     
      generate test case with shortest path cost,assume each step has same weight,and output to show.html
-        robogenerator SIP_Call_Service.py ¨C-strategy ShortestPath ¨Co show.html 
+        robogenerator SIP_Call_Service.py ï¿½C-strategy ShortestPath ï¿½Co show.html 
      generate test case with ActionName coverage, and generate 1 case, each case will limit test steps to 100
-        robogenerator SIP_Call_Service.py ¨C-strategy ActionNameCoverage ¨Ct 1 ¨Cn  100 ¨Co show.html 
+        robogenerator SIP_Call_Service.py ï¿½C-strategy ActionNameCoverage ï¿½Ct 1 ï¿½Cn  100 ï¿½Co show.html 
 
 ==================================================================
 Other extended Function (Could generate State-machine based graph)
@@ -228,13 +231,13 @@ Other extended Function (Could generate State-machine based graph)
 
       then there will be a file SIP_Call_Service.dot in current directory
 
-    It will show following picture£º
+    It will show following pictureï¿½ï¿½
 	.. image:: src/robogenerator/example/SIPCallService/SIP_Call_Service.png
 	
 	Also you use Gvedit.exe to open file  SIP_Call_Service.dot, and edit the  .dot file with yourself.
 	
     From the picture we could see, there are a lot of  possible sequence to execute all possible test case, 
-    if we don¡¯t have tool help, it will be difficult for us to design test procedure which could balance test cost and test coverage.
+    if we donï¿½ï¿½t have tool help, it will be difficult for us to design test procedure which could balance test cost and test coverage.
 
 ============
 Installation
